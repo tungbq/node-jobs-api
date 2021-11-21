@@ -1,0 +1,22 @@
+{
+  "name": "jobs-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tungbq/node-jobs-api.git"
+  },
+  "author": "Tung Bui",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tungbq/node-jobs-api/issues"
+  },
+  "homepage": "https://github.com/tungbq/node-jobs-api#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
