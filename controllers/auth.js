@@ -13,10 +13,8 @@ const register = async (req, res) => {
 	const hashPassword = await bcrypt.hash(password, salt);
 
 	const newUser = { name, email, password: hashPassword };
-	console.log(newUser);
-
-	const user = await User.create(newUser);
-	res.status(StatusCodes.CREATED).json({ user });
+	const user = await User.create({ ...newUser });
+	res.status(StatusCodes.CREATED).json({ name, email });
 };
 
 const login = async (req, res) => {
