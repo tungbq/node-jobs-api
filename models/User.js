@@ -38,6 +38,11 @@ UserSchema.pre('save', async function (next) {
 	}
 });
 
+UserSchema.methods.comparePassword = async function (candidatePassword) {
+	const isMatch = await bcrypt.compare(candidatePassword, this.password);
+	return isMatch;
+};
+
 UserSchema.methods.generateToken = function () {
 	const token = jwt.sign(
 		{ userId: this._id, name: this.name },
