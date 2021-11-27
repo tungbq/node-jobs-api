@@ -8,14 +8,10 @@ const register = async (req, res) => {
 		throw new BadRequestError('Please provide name, email and password');
 	}
 
-	try {
-		const user = await User.create({ name, email, password });
-		res
-			.status(StatusCodes.CREATED)
-			.json({ user: { name, email }, token: user.generateToken() });
-	} catch (error) {
-		res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
-	}
+	const user = await User.create({ name, email, password });
+	res
+		.status(StatusCodes.CREATED)
+		.json({ user: { name, email }, token: user.generateToken() });
 };
 
 const login = async (req, res) => {
