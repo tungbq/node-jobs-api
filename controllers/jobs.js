@@ -7,7 +7,7 @@ const getAllJobs = async (req, res) => {
 		.sort('createdAt')
 		.exec();
 
-	res.status(StatusCodes.OK).json({ jobs, count: jobs.length });
+	res.status(StatusCodes.OK).json({ count: jobs.length, jobs });
 };
 
 const getJob = async (req, res) => {
