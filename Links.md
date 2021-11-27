@@ -15,3 +15,6 @@ https://mongoosejs.com/docs/queries.html
 
 ## 6. Password compare
 https://www.mongodb.com/blog/post/password-authentication-with-mongoose-part-1
+
+## 7. Reference other
+https://stackoverflow.com/questions/18001478/referencing-another-schema-in-mongoose

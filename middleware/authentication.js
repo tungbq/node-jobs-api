@@ -23,3 +23,5 @@ const auth = (req, res, next) => {
 		res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
 	}
 };
+
+module.exports = auth;
