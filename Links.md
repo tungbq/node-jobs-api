@@ -30,3 +30,5 @@ pm.globals.get("accessToken");
 
 ### 8.2. Job routes, we update the authorization part to use {{accessToken}} generated before
 
+## 9. Rate limit
+https://www.npmjs.com/package/express-rate-limit
