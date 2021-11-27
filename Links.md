@@ -32,3 +32,7 @@ pm.globals.get("accessToken");
 
 ## 9. Rate limit
 https://www.npmjs.com/package/express-rate-limit
+
+## 10. Use swagger UI and APIMatic to generate API documentation
+https://swagger.io/tools/swagger-ui/
+https://www.apimatic.io/
