@@ -10,7 +10,11 @@ const getAllJobs = async (req, res) => {
 };
 
 const getJob = async (req, res) => {
-	res.send('get single job');
+	const job = await Job.find({
+		createdBy: req.user.userId,
+		_id: req.params.id,
+	}).exec();
+	res.status(StatusCodes.OK).json({ job });
 };
 
 const createJob = async (req, res) => {
