@@ -17,7 +17,7 @@ const auth = (req, res, next) => {
 	try {
 		var decoded = jwt.verify(token, process.env.JWT_SECRET);
 		// attach the user to the job routes
-		req.user = { userID: decoded.userID, name: decoded.name };
+		req.user = { userId: decoded.userId, name: decoded.name };
 		next();
 	} catch (error) {
 		res.status(StatusCodes.INTERNAL_SERVER_ERROR).json(error);
